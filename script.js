@@ -364,8 +364,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!menuGrid) return;
 
         let menu = JSON.parse(localStorage.getItem('momo_menu'));
-        // Force refresh if the menu has the old structure or items are missing
-        if (!menu || menu.some(item => item.name === "Royal Steamed Veg Momos") || menu.length < 21) {
+        // Force refresh if the menu has the old structure, missing images, or items are missing
+        if (!menu || menu.some(item => !item.img || item.name === "Royal Steamed Veg Momos") || menu.length < 21) {
             menu = defaultMenu;
             localStorage.setItem('momo_menu', JSON.stringify(menu));
         }
