@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dough &amp; Dip - Bold Flavors. Real Memories.</title>
+    <meta name="description" content="Experience Dough &amp; Dip. Bold Flavors. Real Memories. Order now!">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Teko:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Shop Closed Overlay -->
+    <div class="shop-closed-overlay" id="shop-closed-overlay" style="display: none;">
+        <div class="shop-closed-card">
+            <div class="shop-closed-icon">💤</div>
+            <h2>दुकान बंद है (Shop Closed)</h2>
+            <p>Dough & Dip is currently closed today. Ordering is disabled. We will open again tomorrow evening! Thank you for your love!</p>
+        </div>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="site-navbar" id="site-navbar">
+        <div class="navbar-container">
+            <!-- Navbar Logo -->
+            <a href="#hero" class="navbar-logo" id="navbar-logo-link">
+                <img src="Dough &amp; Dip/png.1.png" alt="Dough &amp; Dip Logo" onerror="this.style.display='none'">
+            </a>
+
+            <!-- Nav Links -->
+            <nav class="navbar-links" id="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#story" class="nav-link">Our Story</a>
+                <a href="#locations" class="nav-link">Locations</a>
+            </nav>
+
+            <!-- CTA -->
+            <div class="navbar-cta">
+                <button class="btn btn-order navbar-order-btn" id="btn-navbar-cart" style="color:#fff!important;">
+                    🛒 Cart (<span id="nav-cart-count">0</span>)
+                </button>
+                <!-- Mobile hamburger -->
+                <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+
+
+    <!-- Floating Order Button for Mobile -->
+    <div class="floating-order-widget">
+        <a href="#order-now" class="floating-btn main-order-btn">
+            <span class="btn-icon">🥟</span>
+            <span class="btn-text">Order Online</span>
+        </a>
+        <div class="floating-options">
+            <a href="https://www.zomato.com" target="_blank" rel="noopener noreferrer" class="option-btn zomato-color"
+                title="Order on Zomato">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/></svg>"
+                    alt="Zomato Icon" class="widget-icon"> Zomato
+            </a>
+            <a href="https://www.swiggy.com" target="_blank" rel="noopener noreferrer" class="option-btn swiggy-color"
+                title="Order on Swiggy">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/></svg>"
+                    alt="Swiggy Icon" class="widget-icon"> Swiggy
+            </a>
+        </div>
+    </div>
+
+
+
+    <!-- Playful Theater Stage Hero Section -->
+    <section id="hero" class="hero-section stage-hero-section">
+        <!-- Bubbly Clouds Background -->
+        <div class="stage-bg-clouds">
+            <div class="cloud c1"></div>
+            <div class="cloud c2"></div>
+            <div class="cloud c3"></div>
+        </div>
+
+        <div class="container stage-container">
+            <!-- Center Stage Content -->
+            <div class="stage-content text-center">
+                <h1 class="stage-title">What are you in the mood for today?</h1>
+                <p class="stage-subtitle">We made choosing your momos easy. Just pick what feels like you.</p>
+
+                <!-- Center Stage Mockup -->
+                <div class="stage-center-visual">
+                    <!-- Chili Bowl Character (Sitting Left) -->
+                    <div class="sitting-character sitting-left">
+                        <svg viewBox="0 0 100 100" class="character-svg">
+                            <path d="M 20,40 H 80 L 70,75 C 68,82, 32,82, 30,75 Z" fill="#FF6B00" stroke="#1E1A1A"
+                                stroke-width="3" />
+                            <ellipse cx="50" cy="40" rx="30" ry="8" fill="#B5361D" stroke="#1E1A1A" stroke-width="2" />
+                            <path d="M 62,35 L 75,15 Q 78,12 80,15 T 75,20 L 65,38" fill="#EBB63C" stroke="#1E1A1A"
+                                stroke-width="2.5" />
+                            <circle cx="42" cy="56" r="3.5" fill="#FAF6F0" />
+                            <circle cx="58" cy="56" r="3.5" fill="#FAF6F0" />
+                            <circle cx="42" cy="56" r="1.5" fill="#1E1A1A" />
+                            <circle cx="58" cy="56" r="1.5" fill="#1E1A1A" />
+                            <path d="M 47,63 Q 50,66 53,63" fill="none" stroke="#FAF6F0" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M 35,78 V 86 H 42" fill="none" stroke="#1E1A1A" stroke-width="3"
+                                stroke-linecap="round" />
+                            <path d="M 65,78 V 86 H 73" fill="none" stroke="#1E1A1A" stroke-width="3"
+                                stroke-linecap="round" />
+                        </svg>
+                        <div class="speech-bubble bubble-left">🔥 Spicy Chutney!</div>
+                    </div>
+
+                    <!-- Hero Momo Dishes Carousel -->
+                    <div class="stage-carousel-wrapper" id="hero-carousel-wrapper">
+                        <!-- Navigation Buttons -->
+                        <button class="carousel-btn prev-btn" id="hero-prev-btn" aria-label="Previous Dish">❮</button>
+                        <button class="carousel-btn next-btn" id="hero-next-btn" aria-label="Next Dish">❯</button>
+
+                        <!-- Carousel Track and Slides -->
+                        <div class="carousel-track-container">
+                            <div class="carousel-track" id="hero-carousel-track">
+                                <!-- Slide 1: Steamed Veg Momo -->
+                                <div class="carousel-slide active" data-index="0">
+                                    <div class="plate-wrapper">
+                                        <img src="images/steamed_momo.png" alt="Royal Steamed Veg Momo"
+                                            class="carousel-dish-img">
+                                    </div>
+                                </div>
+                                <!-- Slide 2: Kurkure Momo -->
+                                <div class="carousel-slide" data-index="1">
+                                    <div class="plate-wrapper">
+                                        <img src="images/kurkure_momo.png" alt="Jaipuri Kurkure Momo"
+                                            class="carousel-dish-img">
+                                    </div>
+                                </div>
+                                <!-- Slide 3: Tandoori Momo -->
+                                <div class="carousel-slide" data-index="2">
+                                    <div class="plate-wrapper">
+                                        <img src="images/tandoori_momo.png" alt="Tandoori Angara Momo"
+                                            class="carousel-dish-img">
+                                    </div>
+                                </div>
+                                <!-- Slide 4: Makhni Momo -->
+                                <div class="carousel-slide" data-index="3">
+                                    <div class="plate-wrapper">
+                                        <img src="images/makhni_momo.png" alt="Butter Makhni Momo"
+                                            class="carousel-dish-img">
+                                    </div>
+                                </div>
+                                <!-- Slide 5: Afghani Momo -->
+                                <div class="carousel-slide" data-index="4">
+                                    <div class="plate-wrapper">
+                                        <img src="images/afghani_momo.png" alt="Afghani Creamy Momo"
+                                            class="carousel-dish-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Steam effects on top of current active dish -->
+                        <div class="steam-wrap">
+                            <span class="steam s1"></span>
+                            <span class="steam s2"></span>
+                            <span class="steam s3"></span>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Crown Momo Mascot Waving (Standing Right) -->
+                    <div class="standing-character standing-right">
+                        <svg viewBox="0 0 100 100" class="character-svg">
+                            <path d="M 20,70 C 15,45, 30,30, 50,30 C 70,30, 85,45, 80,70 C 78,85, 22,85, 20,70 Z"
+                                fill="#FAF6F0" stroke="#1E1A1A" stroke-width="3" />
+                            <path d="M 50,30 C 45,40, 40,55, 35,68" fill="none" stroke="#1E1A1A" stroke-width="2" />
+                            <path d="M 50,30 C 50,42, 50,55, 50,68" fill="none" stroke="#1E1A1A" stroke-width="2" />
+                            <path d="M 50,30 C 55,40, 60,55, 65,68" fill="none" stroke="#1E1A1A" stroke-width="2" />
+                            <polygon points="40,28 45,18 50,25 55,18 60,28" fill="#EBB63C" stroke="#1E1A1A"
+                                stroke-width="2" />
+                            <circle cx="42" cy="55" r="4" fill="#1E1A1A" />
+                            <circle cx="58" cy="55" r="4" fill="#1E1A1A" />
+                            <circle cx="36" cy="58" r="3" fill="#D15F7D" opacity="0.6" />
+                            <circle cx="64" cy="58" r="3" fill="#D15F7D" opacity="0.6" />
+                            <path d="M 47,60 Q 50,63 53,60" fill="none" stroke="#1E1A1A" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M 78,58 Q 88,52 90,42" fill="none" stroke="#1E1A1A" stroke-width="3"
+                                stroke-linecap="round" />
+                        </svg>
+                        <div class="speech-bubble bubble-right">🥟 100% Fresh!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stage Floor Border Garland -->
+        <div class="stage-floor">
+            <div class="floor-line"></div>
+            <div class="garland-momo-wrap">
+                <span class="garland-momo">🥟</span>
+                <span class="garland-momo-wrap"></span>
+                <span class="garland-momo">🥟</span>
+                <span class="garland-momo">🥟</span>
+                <span class="garland-momo">🥟</span>
+                <span class="garland-momo">🥟</span>
+                <span class="garland-momo">🥟</span>
+                <span class="garland-momo">🥟</span>
+                <span class="garland-momo">🥟</span>
+                <span class="garland-momo">🥟</span>
+                <span class="garland-momo">🥟</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Why Dough & Dip Section -->
+    <section id="story" class="about-section scroll-reveal">
+        <div class="container">
+            <div class="about-inner">
+
+                <!-- Left: Brand Story -->
+                <div class="about-left">
+                    <span class="about-eyebrow">Our Story</span>
+                    <h2 class="about-headline">We Don't Do<br>Everything —<br>We Do <em>Momos.</em></h2>
+                    <p class="about-body">Born in the vibrant lanes of Jaipur, Dough &amp; Dip was built on one simple
+                        belief: do one thing, and do it to absolute perfection. Every momo is handcrafted fresh, loaded
+                        with bold flavors, and served with dips that make every bite unforgettable.</p>
+                    <div class="about-cta-row">
+                        <a href="#menu" class="btn btn-primary">🥟 Explore Menu</a>
+                        <a href="#locations" class="btn btn-secondary">📍 Find Us</a>
+                    </div>
+                </div>
+
+                <!-- Right: Stats -->
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">🥟</div>
+                        <div class="stat-content">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Momo Varieties</div>
+                            <div class="stat-desc">Steamed, Tandoori, Kurkure, Makhni &amp; more</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📍</div>
+                        <div class="stat-content">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Outlets in Jaipur</div>
+                            <div class="stat-desc">Mansarovar &amp; Vijay Path — serving fresh daily</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🌶️</div>
+                        <div class="stat-content">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Fresh, No Preservatives</div>
+                            <div class="stat-desc">Made to order, every single time</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-content">
+                            <div class="stat-number">4.8★</div>
+                            <div class="stat-label">Rated on Zomato</div>
+                            <div class="stat-desc">Loved by thousands of happy customers</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Section -->
+    <section id="menu" class="menu-section scroll-reveal">
+        <div class="container">
+            <div class="menu-header">
+                <div class="section-tag font-yatra">ज़ायकेदार मेनू</div>
+                <h2 class="section-title text-center">Taste Our Momo Wonders</h2>
+                <p class="section-subtitle text-center">Explore Jaipur's most diverse momo catalog, divided into five
+                    categories representing our signature crafts.</p>
+
+                <!-- Category Filter Controls -->
+                <div class="menu-filters">
+                    <button class="filter-btn active" data-filter="all">✨ All Items</button>
+                    <button class="filter-btn" data-filter="steamed-fried">🥟 Steam & Fried</button>
+                    <button class="filter-btn" data-filter="kurkure">💥 Kurkure Crunch</button>
+                    <button class="filter-btn" data-filter="tandoori">🔥 Tandoori Coal-Grill</button>
+                    <button class="filter-btn" data-filter="gravy">🍛 Gravy & Makhni</button>
+                    <button class="filter-btn" data-filter="spring-rolls">🌯 Spring Rolls</button>
+                    <button class="filter-btn" data-filter="dips">🍯 Sides & Dips</button>
+                    <button class="filter-btn" data-filter="speciality">🌟 Our Speciality</button>
+                </div>
+                <!-- Scan Menu QR Prompt Button -->
+                <div style="text-align: center;">
+                    <button class="qr-scan-prompt" id="btn-show-qr-modal">
+                        📲 Scan Menu on Phone
+                    </button>
+                </div>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-grid">
+                <!-- Dynamic menu items loaded via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Scrolling Section -->
+    <section id="social" class="social-section">
+        <div class="social-sticky-container">
+            <div class="container">
+                <div class="social-header">
+                    <h2 class="section-title text-center">Our Social Wall</h2>
+                    <div class="text-center" style="margin-top: 15px;">
+                        <a href="https://www.instagram.com/dough.dip.jaipur?igsh=MWhtY3Rzb3h4em15aA==" target="_blank"
+                            class="btn btn-primary"
+                            style="background-color: #E1306C; border-color: #E1306C; color:#fff; padding: 10px 20px;">📸
+                            Follow on Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="social-scroll-wrapper">
+                <div class="social-track" id="social-track">
+                    <!-- 10 Social Media Posts -->
+                    <div class="social-card">
+                        <div class="social-img" style="background-image: url('social media/steamed_momo.png');"></div>
+                        <div class="social-content">
+                            <p>Freshly steamed goodness! #DoughAndDip #Momos</p>
+                        </div>
+                        <div class="momo-sticker sticker-1">🥟</div>
+                    </div>
+                    <div class="social-card">
+                        <div class="social-img" style="background-image: url('social media/kurkure_momo.png');"></div>
+                        <div class="social-content">
+                            <p>Craving that extra crunch? 💥 #KurkureMomos</p>
+                        </div>
+                        <div class="momo-sticker sticker-2">🥢</div>
+                    </div>
+                    <div class="social-card">
+                        <div class="social-img" style="background-image: url('social media/tandoori_momo.png');"></div>
+                        <div class="social-content">
+                            <p>Smoky vibes on a Friday night 🔥 #Tandoori</p>
+                        </div>
+                        <div class="momo-sticker sticker-3">🥟</div>
+                    </div>
+                    <div class="social-card">
+                        <div class="social-img" style="background-image: url('social media/makhni_momo.png');"></div>
+                        <div class="social-content">
+                            <p>Rich, creamy, delicious. 🍛 #MakhniGravy</p>
+                        </div>
+                    </div>
+                    <div class="social-card">
+                        <div class="social-img" style="background-image: url('social media/afghani_momo.png');"></div>
+                        <div class="social-content">
+                            <p>Afghani cream perfection. 🤤 #FoodieJaipur</p>
+                        </div>
+                    </div>
+                    <div class="social-card">
+                        <div class="social-img" style="background-image: url('social media/schezwan_momo.png');"></div>
+                        <div class="social-content">
+                            <p>Spice up your life with Schezwan! 🌶️ #Spicy</p>
+                        </div>
+                        <div class="momo-sticker sticker-1">🔥</div>
+                    </div>
+                    <div class="social-card">
+                        <div class="social-img" style="background-image: url('social media/steamed_momo.png');"></div>
+                        <div class="social-content">
+                            <p>Behind the scenes of our royal blend. 👑</p>
+                        </div>
+                    </div>
+                    <div class="social-card">
+                        <div class="social-img" style="background-image: url('social media/kurkure_momo.png');"></div>
+                        <div class="social-content">
+                            <p>Best snacks in town. Tag a friend! 👇</p>
+                        </div>
+                    </div>
+                    <div class="social-card">
+                        <div class="social-img" style="background-image: url('social media/steamed_momo.png');"></div>
+                        <div class="social-content">
+                            <p>Healthy and hearty. ❤️ #EatFresh</p>
+                        </div>
+                    </div>
+                    <div class="social-card">
+                        <div class="social-img" style="background-image: url('social media/tandoori_momo.png');"></div>
+                        <div class="social-content">
+                            <p>See you at our outlets! 👋 #DoughAndDip</p>
+                        </div>
+                        <div class="momo-sticker sticker-2">😋</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branch Showcase Section -->
+    <section id="locations" class="branches-section scroll-reveal">
+        <div class="branches-pattern"></div>
+        <div class="container">
+            <div class="branches-header">
+                <div class="section-tag font-yatra">हमारी शाखाएं</div>
+                <h2 class="section-title text-center">2 Outlets in Jaipur</h2>
+                <p class="section-subtitle text-center">Grab your plate of happiness at your nearest Dough &amp; Dip
+                    branch. Drop by for fresh coal-grilled momos served straight off the grill.</p>
+            </div>
+
+            <div class="branches-container">
+                <!-- Branch Selector Sidebar -->
+                <div class="branches-list">
+                    <div class="branch-card-select active" data-branch="mansarovar">
+                        <div class="branch-card-meta">
+                            <span class="branch-badge main-badge">Main Branch</span>
+                            <h3>Mansarovar</h3>
+                            <p>Vijay Path Crossing, Mansarovar</p>
+                        </div>
+                        <span class="select-indicator">➔</span>
+                    </div>
+
+                    <div class="branch-card-select" data-branch="vijay-path">
+                        <div class="branch-card-meta">
+                            <span class="branch-badge">Trending</span>
+                            <h3>Vijay Path</h3>
+                            <p>Sector 5 Market, Vijay Path</p>
+                        </div>
+                        <span class="select-indicator">➔</span>
+                    </div>
+                </div>
+
+                <!-- Active Branch Details Window -->
+                <div class="branch-detail-window" id="branch-details">
+                    <div class="branch-detail-card" id="details-mansarovar">
+                        <div class="detail-header">
+                            <div class="detail-title-wrap">
+                                <span class="detail-tag font-yatra font-bold text-primary">मुख्य शाखा (Main
+                                    Branch)</span>
+                                <h2>Mansarovar Outlet</h2>
+                            </div>
+                            <span class="status-indicator open">Open Now</span>
+                        </div>
+                        <div class="detail-body">
+                            <div class="detail-info-row">
+                                <span class="info-icon">📍</span>
+                                <div>
+                                    <h4>Address</h4>
+                                    <p>Plot 42, Ward 27, Main Vijay Path Crossing, Mansarovar, Jaipur - 302020</p>
+                                </div>
+                            </div>
+                            <div class="detail-info-row">
+                                <span class="info-icon">📞</span>
+                                <div>
+                                    <h4>Phone Contact</h4>
+                                    <p>+91 98290 12345, +91 141 278940</p>
+                                </div>
+                            </div>
+                            <div class="detail-info-row">
+                                <span class="info-icon">⏰</span>
+                                <div>
+                                    <h4>Operating Hours</h4>
+                                    <p>6:00 PM - 11:00 PM (Everyday)</p>
+                                </div>
+                            </div>
+                            <div class="detail-info-row">
+                                <span class="info-icon">✨</span>
+                                <div>
+                                    <h4>Special Features</h4>
+                                    <p>Outdoor Sitting, Live Tandoor Charcoal Grill, Free Parking.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-footer">
+                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-secondary">Get Directions ➔</a>
+                            <a href="#order-now" class="btn btn-primary">Order From Mansarovar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Contact / Footer CTA Section -->
+    <section id="contact" class="contact-section scroll-reveal" style="background-color: #FFF8F0; padding: 80px 0;">
+        <div class="container contact-container">
+            <div class="cta-banner-wrapper">
+                <div class="cta-inner-card">
+                    <div class="cta-logo" style="margin-bottom: 1.2rem; display:flex; justify-content:center;">
+                        <img src="Dough &amp; Dip/momo logo-08.png" alt="Dough &amp; Dip"
+                            style="height: 100px; width: auto; object-fit: contain;">
+                    </div>
+                    <h2 class="cta-heading" style="color:#1A1A1A;">Ready to taste the<br>flavors of happiness?</h2>
+                    <p class="cta-sub" style="color:#1A1A1A;">Find us on your favorite food delivery apps. Order hot,
+                        juicy, and freshly grilled momos delivered straight to your doorstep in Jaipur.</p>
+
+                    <div class="delivery-icons">
+                        <a href="https://www.zomato.com" target="_blank" rel="noopener noreferrer"
+                            class="partner-btn zomato-partner">
+                            <span class="partner-title">Zomato Food</span>
+                            <span class="partner-rating">★★★★★ 4.8</span>
+                        </a>
+                        <a href="https://www.swiggy.com" target="_blank" rel="noopener noreferrer"
+                            class="partner-btn swiggy-partner">
+                            <span class="partner-title">Swiggy Delivery</span>
+                            <span class="partner-rating">★★★★★ 4.7</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <span class="footer-hindi-logo"
+                        style="font-family: 'Playfair Display', serif; font-weight: 800; font-size: 1.5rem;">Dough &amp;
+                        Dip</span>
+                    <h3>Dough &amp; Dip</h3>
+                </div>
+                <p class="footer-desc">Jaipur's authentic momos outlet. Proudly combining modern culinary techniques
+                    with rich traditional Rajasthani warmth. 100% vegetarian, pure taste.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link" title="Instagram">📸</a>
+                    <a href="#" class="social-link" title="Facebook">📘</a>
+                    <a href="#" class="social-link" title="Twitter">🐦</a>
+                </div>
+            </div>
+
+            <div class="footer-col links-col">
+                <h4>Quick Navigation</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#menu">Momo Menu</a></li>
+                    <li><a href="#locations">Jaipur Branches</a></li>
+                    <li><a href="#contact">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col branches-col">
+                <h4>Key Outlets</h4>
+                <ul>
+                    <li><strong>Mansarovar (Main):</strong> Vijay Path Crossing</li>
+                    <li><strong>Vijay Path:</strong> Sector 5 Market</li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h4>Talk to Us</h4>
+                <p class="contact-detail">📧 hello@Dough &amp; Dipmomos.com</p>
+                <p class="contact-detail">📞 +91 98290 12345</p>
+                <p class="contact-detail">🏢 Corporate Office: Mansarovar, Jaipur, Rajasthan</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Dough &amp; Dip. All rights reserved. Designed with ❤️ in Jaipur.</p>
+                <p>Vegetarian Only 🌱</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+       NEOMORPHIC SHOPPING CART & COD CHECKOUT MODALS
+       ========================================================================== -->
+
+    <!-- Floating Cart Button -->
+    <button class="cart-floating-btn" id="cart-floating-btn" style="display: none;">
+        <span>🛒 Cart</span>
+        <span class="cart-count-badge" id="cart-count-badge">0</span>
+    </button>
+
+    <!-- Cart Drawer Overlay -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h2>🛒 Your Cart</h2>
+            <button class="cart-drawer-close" id="btn-close-cart">&times;</button>
+        </div>
+        <div class="cart-drawer-body" id="cart-drawer-items-list">
+            <!-- Dynamic Cart Items populated via JS -->
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="cart-drawer-subtotal">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>GST & Taxes (Included)</span>
+                    <span>₹0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Grand Total</span>
+                    <span id="cart-drawer-total">₹0</span>
+                </div>
+            </div>
+            <button class="btn btn-primary" id="btn-drawer-checkout" style="width: 100%; border-radius: 40px; justify-content: center; font-weight: 800; font-size: 1.05rem;">
+                ⚡ Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="neo-modal">
+            <button class="modal-close-btn" id="btn-close-checkout">&times;</button>
+            <h2 style="font-family: var(--font-heading); margin-bottom: 20px; border-bottom: 2px solid var(--text-charcoal); padding-bottom: 10px;">📦 Checkout (Cash on Delivery)</h2>
+            
+            <form id="checkout-form" onsubmit="return false;">
+                <div class="neo-form-group">
+                    <label for="cust-name">Your Name / Table Number *</label>
+                    <input type="text" id="cust-name" class="neo-form-input" placeholder="e.g. Rahul Sharma or Table 4" required>
+                </div>
+                
+                <div class="neo-form-group">
+                    <label for="cust-outlet">Select Outlet Branch *</label>
+                    <select id="cust-outlet" class="neo-form-select" required>
+                        <!-- Populated dynamically from momo_outlets -->
+                    </select>
+                </div>
+                
+                <div class="neo-form-group" style="margin-bottom: 24px;">
+                    <label>Payment Method</label>
+                    <div style="background: var(--bg-sand); border: 2px solid var(--text-charcoal); padding: 12px; border-radius: 8px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                        💵 Cash on Delivery (COD)
+                    </div>
+                    <p style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; margin-top: 4px;">
+                        💡 Momos order hone ke baad staff counter par bill verify karenge.
+                    </p>
+                </div>
+                
+                <div style="display: flex; gap: 12px; justify-content: flex-end;">
+                    <button type="button" class="btn btn-secondary" id="btn-cancel-checkout" style="padding: 10px 20px;">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="btn-submit-order" style="padding: 10px 24px;">Place Order ➔</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Plate Size Selector Modal -->
+    <div class="modal-overlay" id="plate-size-modal">
+        <div class="neo-modal" style="max-width: 400px; text-align: center;">
+            <button class="modal-close-btn" id="btn-close-plate-modal">&times;</button>
+            <h2 style="font-family: var(--font-heading); margin-bottom: 15px; border-bottom: 2px solid var(--text-charcoal); padding-bottom: 10px;">🍽️ Select Plate Size</h2>
+            <p id="plate-modal-item-name" style="font-size: 1.1rem; font-weight: 800; margin-bottom: 20px; color: var(--primary-color);"></p>
+            
+            <div class="plate-options-container" style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 25px;">
+                <!-- Half Plate option -->
+                <button class="plate-option-card-btn" id="btn-select-half" style="background: var(--bg-sand); border: 2.5px solid var(--text-charcoal); border-radius: 16px; padding: 15px; display: flex; justify-content: space-between; align-items: center; width: 100%; cursor: pointer; text-align: left; font-family: inherit; font-size: 1rem; transition: var(--transition-bouncy); box-shadow: var(--shadow-flat);">
+                    <div>
+                        <strong style="display: block; font-size: 1.1rem;">Half Plate (5 Pieces)</strong>
+                        <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Perfect for light cravings</span>
+                    </div>
+                    <span id="price-label-half" style="font-family: var(--font-body); font-weight: 800; font-size: 1.25rem; color: var(--primary-color);">₹0</span>
+                </button>
+                
+                <!-- Full Plate option -->
+                <button class="plate-option-card-btn" id="btn-select-full" style="background: var(--bg-sand); border: 2.5px solid var(--text-charcoal); border-radius: 16px; padding: 15px; display: flex; justify-content: space-between; align-items: center; width: 100%; cursor: pointer; text-align: left; font-family: inherit; font-size: 1rem; transition: var(--transition-bouncy); box-shadow: var(--shadow-flat);">
+                    <div>
+                        <strong style="display: block; font-size: 1.1rem;">Full Plate (9 Pieces)</strong>
+                        <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">The complete experience</span>
+                    </div>
+                    <span id="price-label-full" style="font-family: var(--font-body); font-weight: 800; font-size: 1.25rem; color: var(--primary-color);">₹0</span>
+                </button>
+            </div>
+            
+            <div style="display: flex; gap: 12px; justify-content: flex-end;">
+                <button type="button" class="btn btn-secondary" id="btn-cancel-plate" style="padding: 10px 20px;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal-overlay" id="confirmation-modal">
+        <div class="neo-modal" style="max-width: 420px; padding: 20px;">
+            <button class="modal-close-btn" id="btn-close-confirmation">&times;</button>
+            
+            <div class="order-ticket">
+                <div class="ticket-title">DOUGH & DIP</div>
+                <div style="text-align: center; font-size: 0.7rem; font-weight: 700; margin-top: -2px;">MOMO SELF-ORDER TICKET</div>
+                <div class="ticket-divider"></div>
+                
+                <div class="ticket-row">
+                    <span>ORDER ID:</span>
+                    <span id="ticket-order-id" style="font-weight: 800;">ORD-1001</span>
+                </div>
+                <div class="ticket-row">
+                    <span>CUSTOMER:</span>
+                    <span id="ticket-cust-name" style="font-weight: 800;">Rahul</span>
+                </div>
+                <div class="ticket-row">
+                    <span>OUTLET:</span>
+                    <span id="ticket-outlet" style="font-weight: 800;">Mansarovar</span>
+                </div>
+                <div class="ticket-row">
+                    <span>STATUS:</span>
+                    <span style="font-weight: 800; background: #ffeaa7; padding: 1px 6px; border: 1.5px solid #1A1A1A; border-radius: 4px;">PENDING</span>
+                </div>
+                
+                <div class="ticket-divider"></div>
+                <div class="ticket-items" id="ticket-items-list">
+                    <!-- Dynamic items list -->
+                </div>
+                <div class="ticket-divider"></div>
+                
+                <div class="ticket-row" style="font-size: 1rem; font-weight: 800;">
+                    <span>TOTAL AMOUNT:</span>
+                    <span id="ticket-total-price">₹0</span>
+                </div>
+                
+                <div class="ticket-divider"></div>
+                <div class="ticket-footer">
+                    <div>Aapka order kitchen queue mein chala gaya hai!</div>
+                    <div style="margin-top: 4px; font-size: 0.65rem; color: #555;">Please verify & pay COD at the counter.</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <button class="btn btn-primary" id="btn-confirm-done" style="width: 80%; justify-content: center; border-radius: 40px;">Order Received (Done)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Code Modal -->
+    <div class="modal-overlay" id="qr-modal">
+        <div class="neo-modal" style="max-width: 360px; text-align: center;">
+            <button class="modal-close-btn" id="btn-close-qr">&times;</button>
+            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 15px;">📲 Scan Menu on Phone</h3>
+            
+            <div style="background: var(--bg-sand); border: 2px solid var(--text-charcoal); border-radius: 16px; padding: 20px; display: inline-block; margin-bottom: 15px; box-shadow: var(--shadow-flat);">
+                <img id="menu-qr-image" src="" alt="Menu QR Code" style="width: 200px; height: 200px; display: block; border: 2.5px solid var(--text-charcoal); border-radius: 8px;">
+            </div>
+            
+            <p style="font-size: 0.82rem; font-weight: 700; color: var(--text-muted); line-height: 1.4; padding: 0 10px;">
+                Is QR Code ko apne phone camera se scan karein aur website menu direct apne phone par open karein!
+            </p>
+        </div>
+    </div>
+
+    <!-- Active Order Tracker -->
+    <div class="active-order-tracker" id="active-order-tracker" style="display: none;">
+        <div class="tracker-header">
+            <span>🔔 Active Order Status</span>
+            <button id="btn-close-tracker" style="background:none; border:none; color:inherit; font-size:1.1rem; cursor:pointer;">&times;</button>
+        </div>
+        <div class="tracker-body">
+            <p>Order ID: <strong id="track-order-id">ORD-1000</strong></p>
+            <p>Status: <span id="track-order-status" class="tracker-status-badge">PENDING</span></p>
+        </div>
+    </div>
+
+    <!-- Load JavaScript logic -->
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
